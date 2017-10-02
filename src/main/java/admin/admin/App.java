@@ -50,7 +50,7 @@ public class App
     }
     @AfterClass
     public void aftClass() {
-    	driver1.quit();
+    	
     }
     @Given("^Modular GUI is opened$")
     public void modular_GUI_is_opened() throws Throwable {
