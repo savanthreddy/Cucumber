@@ -10,6 +10,10 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -66,7 +70,13 @@ public class App
     @When("^Validate the login page$")
     public void validate_the_login_page() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-    
+    	try{
+    	    PrintWriter writer = new PrintWriter("abc.txt", "UTF-8");
+    	    writer.println("In Validate the login page code");
+    	    writer.close();
+    	} catch (IOException e) {
+    	   // do something
+    	}
     }
 
     @Then("^Login to the Modular$")
