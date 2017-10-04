@@ -2,10 +2,13 @@ package admin.admin;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import cucumber.api.CucumberOptions;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -21,7 +24,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  * Hello world!
  *
  */
-public class App 
+@CucumberOptions(features= {"C:\\Users\\sravanth\\eclipse-workspace\\admin\\asd.feature"},glue= {})
+public class App extends AbstractTestNGCucumberTests
 {
 	public WebDriver driver1;
     public static void main( String[] args )
